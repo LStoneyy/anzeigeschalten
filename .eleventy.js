@@ -12,9 +12,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("serviceworker.js")
 
   return {
+    pathPrefix: "/anzeigeschalten/",
     dir: {
       input: "src",
-      output: "_site"
+      output: "docs"
     }
   };
 }
