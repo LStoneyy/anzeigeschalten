@@ -1,55 +1,77 @@
 :root {
     /* ==== Color variables for Light Mode (Catppuccin Latte) ==== */
-  
-    /* Text colors */
-    --text-primary: #4c4f69; /* Text - Subtext0 */
-    --text-secondary: #6c6f85; /* Subtext1 */
-    --heading-color: #24273a; /* Base */
-  
-    /* Background colors */
-    --background: #eff1f5; /* Base */
-    --foreground: #e6e9ef; /* Surface0 */
-  
-    /* Border and divider colors */
-    --border-color: #ccd0da; /* Overlay0 */
-  
-    /* Accent colors */
-    --accent: #1e66f5; /* Blue */
-    --accent-hover: #7287fd; /* Lavender */
-  
-    /* Status colors */
-    --success: #40a02b; /* Green */
-    --warning: #df8e1d; /* Yellow */
-    --error: #d20f39; /* Red */
-  }
-  
-  /* Dark Mode overrides (Catppuccin Mocha) */
-  @media (prefers-color-scheme: dark) {
-    :root {
-      /* Text colors */
-      --text-primary: #cdd6f4; /* Text */
-      --text-secondary: #a6adc8; /* Subtext0 */
-      --heading-color: #cdd6f4; /* Text */
-  
-      /* Background colors */
-      --background: #1e1e2e; /* Base */
-      --foreground: #313244; /* Surface0 */
-  
-      /* Border and divider colors */
-      --border-color: #45475a; /* Surface1 */
-  
-      /* Accent colors */
-      --accent: #89b4fa; /* Blue */
-      --accent-hover: #b4befe; /* Lavender */
-  
-      /* Status colors */
-      --success: #a6e3a1; /* Green */
-      --warning: #f9e2af; /* Yellow */
-      --error: #f38ba8; /* Red */
-    }
-  }
 
-html{
+    /* Text colors */
+    --text-primary: #4c4f69;
+    /* Text - Subtext0 */
+    --text-secondary: #6c6f85;
+    /* Subtext1 */
+    --heading-color: #24273a;
+    /* Base */
+
+    /* Background colors */
+    --background: #eff1f5;
+    /* Base */
+    --foreground: #e6e9ef;
+    /* Surface0 */
+
+    /* Border and divider colors */
+    --border-color: #ccd0da;
+    /* Overlay0 */
+
+    /* Accent colors */
+    --accent: #1e66f5;
+    /* Blue */
+    --accent-hover: #7287fd;
+    /* Lavender */
+
+    /* Status colors */
+    --success: #40a02b;
+    /* Green */
+    --warning: #df8e1d;
+    /* Yellow */
+    --error: #d20f39;
+    /* Red */
+}
+
+/* Dark Mode overrides (Catppuccin Mocha) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Text colors */
+        --text-primary: #cdd6f4;
+        /* Text */
+        --text-secondary: #a6adc8;
+        /* Subtext0 */
+        --heading-color: #cdd6f4;
+        /* Text */
+
+        /* Background colors */
+        --background: #1e1e2e;
+        /* Base */
+        --foreground: #313244;
+        /* Surface0 */
+
+        /* Border and divider colors */
+        --border-color: #45475a;
+        /* Surface1 */
+
+        /* Accent colors */
+        --accent: #89b4fa;
+        /* Blue */
+        --accent-hover: #b4befe;
+        /* Lavender */
+
+        /* Status colors */
+        --success: #a6e3a1;
+        /* Green */
+        --warning: #f9e2af;
+        /* Yellow */
+        --error: #f38ba8;
+        /* Red */
+    }
+}
+
+html {
     margin: 0 auto;
     flex: 1;
     max-width: 100%;
@@ -73,7 +95,7 @@ ul li {
 
 a {
     font-size: 1.4em;
-    color:var(--text-primary);
+    color: var(--text-primary);
     text-decoration: none;
 }
 
@@ -84,7 +106,7 @@ a:hover {
     transition: all ease 0.4s;
 }
 
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -114,6 +136,10 @@ a:hover {
     margin-top: 2em;
 }
 
+.header nav ul li a img {
+    filter: invert(27%) sepia(8%) saturate(1366%) hue-rotate(197deg) brightness(90%) contrast(85%);
+}
+
 .open {
     transform: translateX(0);
     opacity: 1;
@@ -134,6 +160,10 @@ a:hover {
     position: relative;
     background-color: var(--background);
     overflow: hidden;
+}
+
+.hero-section.impressum {
+    height: auto;
 }
 
 .hero-container {
@@ -307,7 +337,7 @@ body .hero-section .state-selector .select-wrapper select {
     line-height: 1.7;
 }
 
-.info-container p{
+.info-container p {
     font-size: 1.1rem;
     color: var(--text-secondary);
     line-height: 1.7;
@@ -369,18 +399,16 @@ body .hero-section .state-selector .select-wrapper select {
     left: -100%;
     width: 300%;
     height: 100%;
-    background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.2) 50%,
-        rgba(255, 255, 255, 0) 100%
-    );
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.2) 50%,
+            rgba(255, 255, 255, 0) 100%);
     animation: shimmer 1.5s infinite;
 }
 
 .footer {
     background-color: var(--crust);
-    color: #e5e7eb;
+    color: var(--text-primary);
     display: flex;
     align-items: center;
     padding: 1em;
@@ -446,11 +474,11 @@ body .hero-section .state-selector .select-wrapper select {
 .totop img,
 .mailbutton img {
     width: 18px;
-    filter: invert();
+    filter: invert(27%) sepia(8%) saturate(1366%) hue-rotate(197deg) brightness(90%) contrast(85%);
 }
 
 .totop:hover,
-.mailbutton:hover{
+.mailbutton:hover {
     background-color: var(--accent);
     transition: all ease 0.4s;
 }
@@ -463,13 +491,19 @@ body .hero-section .state-selector .select-wrapper select {
 
 /* Shake animation for form validation */
 @keyframes shake {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateX(0);
     }
-    20%, 60% {
+
+    20%,
+    60% {
         transform: translateX(-5px);
     }
-    40%, 80% {
+
+    40%,
+    80% {
         transform: translateX(5px);
     }
 }
@@ -514,12 +548,19 @@ html {
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         transform: translateY(0);
     }
+
     40% {
         transform: translateY(-10px);
     }
+
     60% {
         transform: translateY(-5px);
     }
@@ -530,18 +571,18 @@ html {
     .hero-title {
         font-size: 3.5rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1.5rem;
     }
-    
+
     .info-content {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 920px) {
-    .hero-container{
+    .hero-container {
         padding: 0;
     }
 
@@ -552,11 +593,11 @@ html {
 }
 
 @media (max-width: 767px) {
-    
+
     .hero-title {
         font-size: 2rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1.1rem;
     }
