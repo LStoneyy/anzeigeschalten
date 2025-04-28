@@ -243,6 +243,12 @@ a:hover {
     transform: translateX(4px);
 }
 
+body .hero-section .state-selector .select-wrapper select {
+    background-color: var(--background) !important;
+    color: var(--text-primary) !important;
+    opacity: 1 !important;
+}
+
 /* Scroll Indicator */
 .scroll-indicator {
     position: absolute;

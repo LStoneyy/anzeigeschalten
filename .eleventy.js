@@ -9,7 +9,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/static/svg")
   eleventyConfig.addPassthroughCopy("src/sitemap.xml")
   eleventyConfig.addPassthroughCopy("src/robots.txt")
-  eleventyConfig.addPassthroughCopy("_data")
+
 
   return {
     dir: {

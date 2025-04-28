@@ -1,5 +1,6 @@
 ---
 title: AnzeigeSchalten | Start
+bundeslaender: bundeslaender
 ---
 {% extends "base.njk" %}
 {% block content %}
@@ -14,24 +15,11 @@ title: AnzeigeSchalten | Start
                     <div class="select-wrapper">
                         <select id="bundesland" name="bundesland" required>
                             <option value="" disabled selected>Bundesland auswählen</option>
-                            <option value="baden-wuerttemberg">Baden-Württemberg</option>
-                            <option value="bayern">Bayern</option>
-                            <option value="berlin">Berlin</option>
-                            <option value="brandenburg">Brandenburg</option>
-                            <option value="bremen">Bremen</option>
-                            <option value="hamburg">Hamburg</option>
-                            <option value="hessen">Hessen</option>
-                            <option value="mecklenburg-vorpommern">Mecklenburg-Vorpommern</option>
-                            <option value="niedersachsen">Niedersachsen</option>
-                            <option value="nordrhein-westfalen">Nordrhein-Westfalen</option>
-                            <option value="rheinland-pfalz">Rheinland-Pfalz</option>
-                            <option value="saarland">Saarland</option>
-                            <option value="sachsen">Sachsen</option>
-                            <option value="sachsen-anhalt">Sachsen-Anhalt</option>
-                            <option value="schleswig-holstein">Schleswig-Holstein</option>
-                            <option value="thueringen">Thüringen</option>
+
+                            <option value="NRW">Nordrhein-Westfalen</option>
                         </select>
                     </div>
+
                     <button type="submit" class="submit-button">
                         <span>Weiter</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-right">

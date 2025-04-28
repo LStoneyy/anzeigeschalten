@@ -17,32 +17,44 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Form submit handler with animation
-    const stateForm = document.getElementById('stateForm');
-    if (stateForm) {
-        stateForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const bundesland = document.getElementById('bundesland').value;
-            if (!bundesland) {
-                // Highlight the select field if nothing is selected
-                document.querySelector('.select-wrapper').classList.add('shake');
-                setTimeout(() => {
-                    document.querySelector('.select-wrapper').classList.remove('shake');
-                }, 500);
-                return;
-            }
-            
-            // Add loading animation to button
-            const submitButton = this.querySelector('.submit-button');
-            submitButton.classList.add('loading');
-            submitButton.disabled = true;
-            
-            // Add loading animation and redirect
+const stateForm = document.getElementById('stateForm');
+if (stateForm) {
+    stateForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const bundesland = document.getElementById('bundesland').value;
+        if (!bundesland) {
+            // Highlight the select field if nothing is selected
+            document.querySelector('.select-wrapper').classList.add('shake');
             setTimeout(() => {
-                window.location.href = `/bundesland/${bundesland}`;
+                document.querySelector('.select-wrapper').classList.remove('shake');
             }, 500);
-        });
-    }
+            return;
+        }
+        
+        // Add loading animation to button
+        const submitButton = this.querySelector('.submit-button');
+        submitButton.classList.add('loading');
+        submitButton.disabled = true;
+        
+        // URL-Mapping für die Bundesländer
+        const urlMapping = {
+            "NRW": "https://formulare.polizei.nrw/anzeige",
+            // Weitere Bundesländer hier hinzufügen
+        };
+        
+        // Add loading animation and redirect
+        setTimeout(() => {
+            // Wenn eine URL für das Bundesland definiert ist, dorthin weiterleiten
+            if (urlMapping[bundesland]) {
+                window.location.href = urlMapping[bundesland];
+            } else {
+                // Fallback auf die ursprüngliche URL
+                window.location.href = `/bundesland/${bundesland}`;
+            }
+        }, 500);
+    });
+}
 });
 
 // Existing functions
