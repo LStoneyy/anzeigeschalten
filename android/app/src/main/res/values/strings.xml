@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">AnzeigeSchalten</string>
+    <string name="title_activity_main">AnzeigeSchalten</string>
+    <string name="package_name">com.webcommits.anzeigeschalten</string>
+    <string name="custom_url_scheme">com.webcommits.anzeigeschalten</string>
+</resources>
