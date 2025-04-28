@@ -17,8 +17,10 @@
 </style>
 </head>
 <body>
+  {% include "header.njk" %}
     <main>
     {% block content %} {% endblock %}
     </main>
+  {% include "footer.njk" %}
 </body>
 </html>

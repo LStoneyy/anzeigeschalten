@@ -60,6 +60,13 @@ html{
     font-size: 1em;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 ul li {
     list-style: none;
 }
@@ -112,6 +119,395 @@ a:hover {
     opacity: 1;
 }
 
-@media all and (max-width: 1250px) {
+
+/* Ergänzung für die bestehende style.css */
+
+/* Hero Section Styles */
+.hero-section {
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+    position: relative;
+    background-color: var(--background);
+    overflow: hidden;
+}
+
+.hero-container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s 0.2s forwards;
+}
+
+/* State Selector Styles */
+.state-selector {
+    margin: 2.5rem 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s 0.4s forwards;
+}
+
+.select-wrapper {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.select-wrapper select {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background-color: var(--foreground);
+    color: var(--text-primary);
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.select-wrapper::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid var(--text-secondary);
+    pointer-events: none;
+}
+
+.select-wrapper select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--accent);
+    border-color: var(--accent);
+}
+
+.submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: var(--accent);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.submit-button:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+.submit-button span {
+    margin-right: 0.5rem;
+}
+
+.submit-button .chevron-right {
+    transition: transform 0.3s ease;
+}
+
+.submit-button:hover .chevron-right {
+    transform: translateX(4px);
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeIn 0.8s 0.8s forwards;
+}
+
+.scroll-indicator span {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.scroll-indicator .chevron-down {
+    animation: bounce 1.5s infinite;
+}
+
+/* Info Section */
+.info-section {
+    padding: 6rem 1rem;
+    background-color: var(--foreground);
+}
+
+.info-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--heading-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.info-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3em;
+}
+
+.info-content p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* Zusätzliche Animation Styles */
+
+/* Apple-like loading animation for button */
+.submit-button.loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-button.loading::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.2) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    animation: shimmer 1.5s infinite;
+}
+
+.footer {
+    background-color: var(--crust);
+    color: #e5e7eb;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    flex-direction: column;
+}
+
+.footer ul {
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.totop {
+    background: var(--foreground);
+    position: fixed;
+    bottom: 64px;
+    right: 64px;
+    width: 32px;
+    height: 32px;
+    border: var(--foreground);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0 4px #000000;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.totop.active {
+    bottom: 64px;
+    opacity: 80%;
+    pointer-events: auto;
+    z-index: 999;
+}
+
+.mailbutton {
+    background: var(--foreground);
+    position: fixed;
+    bottom: 64px;
+    right: 64px;
+    width: 32px;
+    height: 32px;
+    border: var(--foreground);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0 4px #000000;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.mailbutton.active {
+    bottom: 114px;
+    opacity: 60%;
+    pointer-events: auto;
+    z-index: 999;
+}
+
+.totop img,
+.mailbutton img {
+    width: 18px;
+    filter: invert();
+}
+
+.totop:hover,
+.mailbutton:hover{
+    background-color: var(--accent);
+    transition: all ease 0.4s;
+}
+
+@keyframes shimmer {
+    100% {
+        left: 100%;
+    }
+}
+
+/* Shake animation for form validation */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    20%, 60% {
+        transform: translateX(-5px);
+    }
+    40%, 80% {
+        transform: translateX(5px);
+    }
+}
+
+.shake {
+    animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+/* Scroll reveal animations */
+.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Smooth scroll behavior for entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Apple-like focus styles */
+:focus {
+    outline: none;
+}
+
+/* Improved hover effect for select */
+.select-wrapper select:hover {
+    border-color: var(--accent);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
     
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .info-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-section {
+        padding-top: 4rem;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .totop.active {
+        bottom: 24px;
+        right: 24px;
+        opacity: 60%;
+    }
+
+    .mailbutton.active {
+        bottom: 64px;
+        right: 24px;
+        opacity: 60%;
+    }
 }
