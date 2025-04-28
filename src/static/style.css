@@ -307,6 +307,12 @@ body .hero-section .state-selector .select-wrapper select {
     line-height: 1.7;
 }
 
+.info-container p{
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
 .info-container h3 {
     padding: 0 3em 1em 3em;
     text-align: center;
