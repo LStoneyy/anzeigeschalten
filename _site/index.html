@@ -35,68 +35,76 @@
 </div>
     <main>
     
-<section class="hero-section">
-    <div class="hero-container">
-        <h2 class="hero-title">Willkommen bei AnzeigeSchalten</h2>
-        <p class="hero-subtitle">der schnellste Weg, eine Anzeige zu schalten.</p>
-        <p class="hero-subtitle">Wählen Sie Ihr Bundesland, um fortzufahren:</p>
-        
-        <div class="state-selector">
-            <form id="stateForm" action="/redirect" method="GET">
-                <div class="select-wrapper">
-                    <select id="bundesland" name="bundesland" required>
-                        <option value="" disabled selected>Bundesland auswählen</option>
-                        <option value="baden-wuerttemberg">Baden-Württemberg</option>
-                        <option value="bayern">Bayern</option>
-                        <option value="berlin">Berlin</option>
-                        <option value="brandenburg">Brandenburg</option>
-                        <option value="bremen">Bremen</option>
-                        <option value="hamburg">Hamburg</option>
-                        <option value="hessen">Hessen</option>
-                        <option value="mecklenburg-vorpommern">Mecklenburg-Vorpommern</option>
-                        <option value="niedersachsen">Niedersachsen</option>
-                        <option value="nordrhein-westfalen">Nordrhein-Westfalen</option>
-                        <option value="rheinland-pfalz">Rheinland-Pfalz</option>
-                        <option value="saarland">Saarland</option>
-                        <option value="sachsen">Sachsen</option>
-                        <option value="sachsen-anhalt">Sachsen-Anhalt</option>
-                        <option value="schleswig-holstein">Schleswig-Holstein</option>
-                        <option value="thueringen">Thüringen</option>
-                    </select>
-                </div>
-                <button type="submit" class="submit-button">
-                    <span>Weiter</span>
+    <section class="hero-section">
+        <div class="hero-container">
+            <h2 class="hero-title">Willkommen bei AnzeigeSchalten</h2>
+            <p class="hero-subtitle">der schnellste Weg, eine Anzeige zu schalten.</p>
+            <p class="hero-subtitle">Wählen Sie Ihr Bundesland, um fortzufahren:</p>
+
+            <div class="state-selector">
+                <form id="stateForm" action="/redirect" method="GET">
+                    <div class="select-wrapper">
+                        <select id="bundesland" name="bundesland" required>
+                            <option value="" disabled selected>Bundesland auswählen</option>
+                            <option value="baden-wuerttemberg">Baden-Württemberg</option>
+                            <option value="bayern">Bayern</option>
+                            <option value="berlin">Berlin</option>
+                            <option value="brandenburg">Brandenburg</option>
+                            <option value="bremen">Bremen</option>
+                            <option value="hamburg">Hamburg</option>
+                            <option value="hessen">Hessen</option>
+                            <option value="mecklenburg-vorpommern">Mecklenburg-Vorpommern</option>
+                            <option value="niedersachsen">Niedersachsen</option>
+                            <option value="nordrhein-westfalen">Nordrhein-Westfalen</option>
+                            <option value="rheinland-pfalz">Rheinland-Pfalz</option>
+                            <option value="saarland">Saarland</option>
+                            <option value="sachsen">Sachsen</option>
+                            <option value="sachsen-anhalt">Sachsen-Anhalt</option>
+                            <option value="schleswig-holstein">Schleswig-Holstein</option>
+                            <option value="thueringen">Thüringen</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-button">
+                        <span>Weiter</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-right">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+
+            <div class="scroll-indicator" id="scrollDown">
+                <span>Mehr erfahren</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-down">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section" id="infoSection">
+        <div class="info-container">
+            <h2 class="section-title">Über AnzeigeSchalten</h2>
+            <div class="info-content">
+                <p>AnzeigeSchalten bietet Ihnen eine unkomplizierte und schnelle Möglichkeit, rechtliche Anzeigen schnell und effizient zu schalten. Wir bieten eine einfache Schnittstelle zum lokalen Anzeigeservice der Polizei, um eine effizientere Kommunikation per App zu gewährleisten.</p>
+                <p>Diese Seite basiert auf einfachem und handgeschriebenem Code, um die Kommunikation schnell und performant zu halten, aber auch zu zeigen, dass keine komplizierten Techniken benötigt werden, um moderne und professionelle Weblösungen zu generieren.</p>
+            </div>
+            <h3>Bei Interesse an ähnlichen Lösungen freue ich mich auf Ihre Rückmeldung über das Kontaktformular per Klick auf den Button</h3>
+            <button class="submit-button">
+                <a href="https://webcommits.github.io/webcommits-website/contact/">
+                    <span>Zum Kontaktformular</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-right">
                         <polyline points="9 18 15 12 9 6"></polyline>
                     </svg>
-                </button>
-            </form>
+                </a>
+            </button>
         </div>
-        
-        <div class="scroll-indicator" id="scrollDown">
-            <span>Mehr erfahren</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-down">
-                <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-        </div>
-    </div>
-</section>
-
-<section class="info-section" id="infoSection">
-    <div class="info-container">
-        <h2 class="section-title">Über AnzeigeSchalten</h2>
-        <div class="info-content">
-            <p>AnzeigeSchalten bietet Ihnen eine unkomplizierte und schnelle Möglichkeit, rechtliche Anzeigen schnell und effizient zu schalten. Wir bieten eine einfache Schnittstelle zum lokalen Anzeigeservice der Polizei, um eine effizientere Kommunikation per App zu gewährleisten.</p>
-            <p>Diese Seite basiert auf einfachem und handgeschriebenem Code, um die Kommunikation schnell und performant zu halten, aber auch zu zeigen, dass keine komplizierten Techniken benötigt werden, um moderne und professionelle Weblösungen zu generieren.</p>
-            <h3>Bei Interesse an ähnlichen Lösungen freue ich mich auf Ihre Rückmeldung über das Kontaktformular per Klick auf den Button</h3>
-        </div>
-    </div>
-</section>
+    </section>
 
     </main>
   <div class="footer">
   <ul>
-    <li>Copyright © webCommits web Designs 2025</li>
+    <li>Copyright © Lukas Schaffrath 2025</li>
   </ul>
 </div>
 <div class="button-row">
