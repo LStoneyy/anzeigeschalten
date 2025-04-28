@@ -1,51 +1,51 @@
 :root {
-    /* ==== Color variables for Light Mode ==== */
+    /* ==== Color variables for Light Mode (Catppuccin Latte) ==== */
   
     /* Text colors */
-    --text-primary: #1a1a1a; /* Haupttext */
-    --text-secondary: #555555; /* Nebentext */
-    --heading-color: #000000; /* Überschriften */
+    --text-primary: #4c4f69; /* Text - Subtext0 */
+    --text-secondary: #6c6f85; /* Subtext1 */
+    --heading-color: #24273a; /* Base */
   
     /* Background colors */
-    --background: #ffffff; /* Haupt-Hintergrund */
-    --foreground: #f7f7f7; /* Karten, Sektionen */
+    --background: #eff1f5; /* Base */
+    --foreground: #e6e9ef; /* Surface0 */
   
     /* Border and divider colors */
-    --border-color: #e0e0e0; /* zarte Linien */
+    --border-color: #ccd0da; /* Overlay0 */
   
     /* Accent colors */
-    --accent: #0077ff; /* Hauptfarbe für Buttons, Links */
-    --accent-hover: #005ecc; /* Hover-Farbe */
+    --accent: #1e66f5; /* Blue */
+    --accent-hover: #7287fd; /* Lavender */
   
     /* Status colors */
-    --success: #28a745;
-    --warning: #ffc107;
-    --error: #dc3545;
+    --success: #40a02b; /* Green */
+    --warning: #df8e1d; /* Yellow */
+    --error: #d20f39; /* Red */
   }
   
-  /* Dark Mode overrides */
+  /* Dark Mode overrides (Catppuccin Mocha) */
   @media (prefers-color-scheme: dark) {
     :root {
       /* Text colors */
-      --text-primary: #f0f0f0;
-      --text-secondary: #bbbbbb;
-      --heading-color: #ffffff;
+      --text-primary: #cdd6f4; /* Text */
+      --text-secondary: #a6adc8; /* Subtext0 */
+      --heading-color: #cdd6f4; /* Text */
   
       /* Background colors */
-      --background: #121212;
-      --foreground: #1e1e1e;
+      --background: #1e1e2e; /* Base */
+      --foreground: #313244; /* Surface0 */
   
       /* Border and divider colors */
-      --border-color: #333333;
+      --border-color: #45475a; /* Surface1 */
   
       /* Accent colors */
-      --accent: #66aaff;
-      --accent-hover: #3388ff;
+      --accent: #89b4fa; /* Blue */
+      --accent-hover: #b4befe; /* Lavender */
   
       /* Status colors */
-      --success: #28a745;
-      --warning: #ffc107;
-      --error: #dc3545;
+      --success: #a6e3a1; /* Green */
+      --warning: #f9e2af; /* Yellow */
+      --error: #f38ba8; /* Red */
     }
   }
 
