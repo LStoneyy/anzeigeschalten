@@ -1,12 +1,12 @@
 {
   "dependencies": {
-    "@11ty/eleventy": "github:11ty/eleventy"
+    "@11ty/eleventy": "github:11ty/eleventy",
+    "@capacitor/core": "^7.2.0"
   },
   "name": "anzeigeschalten",
   "version": "1.0.0",
   "description": "Eine mobile App, die Nutzern eine schnelle Auswahl ihres Bundeslandes ermöglicht und sie direkt zur offiziellen Online-Anzeigeplattform der Polizei weiterleitet.",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "build": "npx @11ty/eleventy",
     "start": "npx @11ty/eleventy --serve",
@@ -28,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/LStoneyy/anzeigeschalten/issues"
   },
-  "homepage": "https://github.com/LStoneyy/anzeigeschalten#readme"
+  "homepage": "https://github.com/LStoneyy/anzeigeschalten#readme",
+  "devDependencies": {
+    "@capacitor/cli": "^7.2.0"
+  }
 }
