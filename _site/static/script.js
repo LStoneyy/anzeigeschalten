@@ -39,8 +39,22 @@ if (stateForm) {
         
         // URL-Mapping für die Bundesländer
         const urlMapping = {
-            "NRW": "https://formulare.polizei.nrw/anzeige",
-            // Weitere Bundesländer hier hinzufügen
+            "baden-wuerttemberg": "https://portal.onlinewache.polizei.de/de/bw/",
+            "bayern": "https://anzeige.polizei.bayern.de/",
+            "berlin": "https://www.internetwache-polizei-berlin.de/index_start.html",
+            "brandenburg": "https://polizei.brandenburg.de/onlineservice/auswahl_strafanzeige",
+            "bremen": "https://portal.onlinewache.polizei.de/de/hb/",
+            "hamburg": "https://portal.onlinewache.polizei.de/de/hh/",
+            "hessen": "https://portal.onlinewache.polizei.de/de/he/",
+            "mecklenburg-vorpommern": "https://portal.onlinewache.polizei.de/de/mv/",
+            "niedersachsen": "https://portal.onlinewache.polizei.de/de/ni/",
+            "nordrhein-westfalen": "https://formulare.polizei.nrw/anzeige",
+            "rheinland-pfalz": "https://portal.onlinewache.polizei.de/de/rp/",
+            "saarland": "https://www.saarland.de/polizei/DE/onlinewache/onlinewache_node.html",
+            "sachsen": "https://portal.onlinewache.polizei.de/de/sn/",
+            "sachsen-anhalt": "https://polizei.sachsen-anhalt.de/das-sind-wir/polizei-interaktiv/e-revier/anzeige-erstatten",
+            "schleswig-holstein": "https://portal.onlinewache.polizei.de/de/sh/",
+            "thueringen": "https://portal.onlinewache.polizei.de/de/th/"
         };
         
         // Add loading animation and redirect
